@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <style>
+        body{
+            margin: 0mm;
+        }
+        a{
+            text-decoration: none;
+            color: #333;
+        }
+        
+header {
+  background: #fff;
+  color: #333;
+  padding: 1rem;
+}
+
+header a:hover {
+  color: white;
+}
+
+.logo {
+  float: left;
+  margin-left: 5rem;
+  margin-top: .75rem;
+  /* height: inherit; */
+}
+
+header nav {
+  float: right;
+  
+}
+
+header nav ul {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+
+header nav ul li {
+  float: left;
+  position: relative;
+}
+header nav ul .menulink {
+  float: left;
+  position: relative;
+  left: -15rem;
+}
+header nav ul .sec-menu {
+  /* float: left; */
+  position: relative;
+  left: -8rem;
+}
+
+header nav ul li a {
+  display: block;
+  padding: 21px;
+  font-size: 1.1em;
+}
+
+header nav ul li a:hover {
+  background: #FD749B;
+  transition: 0.5s;
+}
+
+header nav ul li ul {
+  display: none;
+  position: absolute;
+  right: 0px;
+  z-index: 4;
+}
+
+header nav ul li:hover .dropdown {
+  display: block;
+}
+
+header nav ul li .dropdown li {
+  width: 180px;
+}
+
+header nav ul li .dropdown li a {
+  background: #fff;
+  color: #444444;
+  padding: 10px;
+}
+
+header nav ul li .dropdown li a:hover {
+    background: linear-gradient(179.37deg, #FD749B -13.56%, #281AC8 158.3%);
+
+}
+
+
+header header nav ul li .dropdown .userinfo {
+  width: 130px;
+}
+header nav ul li .userinfo{
+    padding-left: 1rem;
+}
+
+header nav ul .userinfo i.fa-user {
+  font-size: 1.3em;
+  margin-right: 3px;
+}
+
+header nav ul .userinfo i.fa-chevron-down {
+  float: right;
+  font-size: .7em;
+  margin: 6px 3px;
+}
+
+.menu-toggle {
+  display: none;
+}
+.login-btn{
+    background:linear-gradient(179.37deg, #FD749B -13.56%, #281AC8 158.3%);
+    border: 1px solid #FD749B;
+    padding: 10px 30px;
+    border-radius: 20px;
+    margin-top: .5rem;
+    font-size: 14px;
+}
+@media (max-width: 768px) {
+.menu-toggle {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    float: right;
+    cursor: pointer;
+    text-align: center;
+    font-size: 30px;
+    color: #FD749B;
+  }
+  .menu-toggle:before {
+    content: '\f0c9';
+    font-family: fontAwesome;
+    line-height: 40px;
+  }
+  nav {
+    width: 100%;
+    background:#FD749B;
+  }
+  nav ul {
+    max-height: 0px;
+    overflow: hidden;
+  }
+  .showing {
+    max-height: 95em;
+  }
+  nav ul li {
+    box-sizing: border-box;
+    width: 100%;
+  }
+  header nav ul li ul {
+    position: static;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+  }
+  header nav ul li {
+  float: left;
+  position: relative;
+  left: -0rem;
+}
+header nav ul .menulink {
+  float: left;
+  position: relative;
+  left: 0rem;
+}
+header nav ul .sec-menu {
+    float: left;
+  position: relative;
+  left: 0rem;
+}
+  header nav ul li .dropdown li {
+    clear: both;
+    width: 100%;
+  }
+  header nav ul li .dropdown li a {
+    background: #F4f4f4;
+    color: #333;
+    padding: 15px;
+    padding-left: 50px;
+  }
+  header nav ul li .dropdown li a:hover {
+    background:linear-gradient(179.37deg, #FD749B -13.56%, #281AC8 158.3%);
+
+  }
+}
+
+    </style>
+</head>
+<body>
+    <!-- header -->
+  <header class="clearfix">
+    <div class="logo">
+      <a href="#"><img src="coin-base-img/Logo.svg" alt=""></a>
+    </div>
+    <div class="fa fa-reorder menu-toggle"></div>
+    <nav>
+      <ul>
+        <li><a href="#" class="menulink">Home</a></li>
+        <li><a href="#" class="menulink">About</a></li>
+        <li><a href="#" class="menulink">Blog</a></li>
+        <li><a href="#" class="menulink">Contact us</a></li>
+        <li>
+          <a href="#" class="userinfo sec-menu" >
+            Sell Giftcard/Bitcoin
+            <i class="fa fa-chevron-down"></i>
+          </a>
+          <ul class="dropdown">
+            <li><a href="#">Sell Giftcard</a></li>
+            <li><a href="#" class="logout">Sell Bitcoin</a></li>
+          </ul>
+        </li>
+        <button class="login-btn sec-menu">Login</button>
+      </ul>
+    </nav>
+  </header>
+  <!-- // header -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+      $(document).ready(function () {
+
+$('.menu-toggle').on('click',function () {
+  $('.menu-toggle').toggleClass('showing');
+  $('nav').toggleClass('showing');
+  $('nav ul').toggleClass('showing');
+});
+});
+  </script>
+</body>
+</html>
